@@ -14,7 +14,6 @@
   </script>
   <script>
   setInterval(function() {
-  count = sukoa;
   document.getElementById("counter").textContent = count;
   setCookie("count", count, 365);
   document.cookie = "count=" + number;
@@ -66,7 +65,8 @@
       var id = setInterval(function(){
       if(sp === 0) {
       count++;
-      sukoa += 2;}
+      sukoa += 2;
+      count += 2;}
       document.getElementById('sukoa').textContent = sukoa;
       document.querySelector('#timer').textContent=count;
       if(count <= 0) clearInterval(id);
@@ -269,6 +269,7 @@
       if (isLineOK) {//ここに来るということはその列が揃っていたことを意味する
       //その行から上に向かってfor文を動かす
       sukoa += 100;
+      count += 100;
       document.getElementById('sukoa').textContent = sukoa;
       for (let ny = y; ny > 0; ny--) {
       for (let nx = 0; nx < boardCol; nx++) {
