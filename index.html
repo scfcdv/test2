@@ -1,8 +1,8 @@
 <head>
   <h1 id="counter">0</h1>
   <script>
-  var count = parseInt(getCookie("count")) || 0;
-  document.getElementById("counter").textContent = count;
+  var count9 = parseInt(getCookie("count9")) || 0;
+  document.getElementById("counter").textContent = count9;
   document.getElementById("counter").addEventListener("click", function() {});
   function setCookie(name, value, days) {
   const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
@@ -14,9 +14,9 @@
   </script>
   <script>
   setInterval(function() {
-  document.getElementById("counter").textContent = count;
-  setCookie("count", count, 365);
-  document.cookie = "count=" + number;
+  document.getElementById("counter").textContent = count9;
+  setCookie("count9", count9, 365);
+  document.cookie = "count9=" + number;
   }, 0);
   </script>
       <title>テトリス</title>
@@ -66,7 +66,7 @@
       if(sp === 0) {
       count++;
       sukoa += 2;
-      count += 2;}
+      count9 += 2;}
       document.getElementById('sukoa').textContent = sukoa;
       document.querySelector('#timer').textContent=count;
       if(count <= 0) clearInterval(id);
